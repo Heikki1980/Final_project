@@ -72,11 +72,11 @@ st.markdown(f"Average paid price: <span style='color: green;'> {average_paid_pri
 
 
 if 'graph' not in st.session_state:
-    st.session_state.graph = 1
+    st.session_state.graph = 0
 
 # Checkbox to toggle graph version
 toggle = st.checkbox("Switch to Beta version of graphs", value=st.session_state.graph == 1)
-st.session_state.graph = 1 if toggle else 0
+st.session_state.graph = 0 if toggle else 1
 
 
 
