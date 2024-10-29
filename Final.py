@@ -22,8 +22,8 @@ hinta = "https://github.com/Heikki1980/Final_project/blob/main/sahkon-hinta-0101
 
 #file_path = os.getcwd() + "/data/Electricity_20-09-2024.csv"
 #file_path2 = os.getcwd() + "/data/sahkon-hinta-010121-240924.csv"
-df_elec = pd.read_csv(hinta, sep=";", decimal=",")
-df_hinta = pd.read_csv(sahko, sep=",")
+df_elec = pd.read_csv(sahko, sep=";", decimal=",")
+df_hinta = pd.read_csv(hinta, sep=",")
 
 # Modifying data and merging dataframes
 df_hinta.replace("/", "-")
