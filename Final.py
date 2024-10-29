@@ -16,10 +16,14 @@ TimeSelection ={
     "6 months": "6M",
 }
 # Loading the files and data to dataframes
-file_path = os.getcwd() + "/data/Electricity_20-09-2024.csv"
-file_path2 = os.getcwd() + "/data/sahkon-hinta-010121-240924.csv"
-df_elec = pd.read_csv(file_path, sep=";", decimal=",")
-df_hinta = pd.read_csv(file_path2, sep=",")
+sahko = "https://github.com/Heikki1980/Final_project/blob/main/Electricity_20-09-2024.csv"
+hinta = "https://github.com/Heikki1980/Final_project/blob/main/sahkon-hinta-010121-240924.csv"
+
+
+#file_path = os.getcwd() + "/data/Electricity_20-09-2024.csv"
+#file_path2 = os.getcwd() + "/data/sahkon-hinta-010121-240924.csv"
+df_elec = pd.read_csv(sahko, sep=";", decimal=",")
+df_hinta = pd.read_csv(hinta, sep=",")
 
 # Modifying data and merging dataframes
 df_hinta.replace("/", "-")
