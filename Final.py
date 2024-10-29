@@ -18,13 +18,16 @@ TimeSelection ={
 # Loading the files and data to dataframes
 sahko = "https://raw.githubusercontent.com/Heikki1980/Final_project/refs/heads/main/Electricity_20-09-2024.csv"
 hinta = "https://raw.githubusercontent.com/Heikki1980/Final_project/refs/heads/main/sahkon-hinta-010121-240924.csv"
-df1 = pd.read_csv(sahko)
-df2 = pd.read_csv(hinta)
+#df1 = pd.read_csv(sahko)
+#df2 = pd.read_csv(hinta)
+df_elec = pd.read_csv(sahko, sep=";", decimal=",")
+df_hinta = pd.read_csv(hinta, sep=",")
+
 
 #file_path = os.getcwd() + "/data/Electricity_20-09-2024.csv"
 #file_path2 = os.getcwd() + "/data/sahkon-hinta-010121-240924.csv"
-df_elec = df1(sep=";", decimal=",")
-df_hinta = df2(hinta, sep=",")
+#df_elec = df1(sep=";", decimal=",")
+#df_hinta = df2(hinta, sep=",")
 
 # Modifying data and merging dataframes
 df_hinta.replace("/", "-")
